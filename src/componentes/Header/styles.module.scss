@@ -1,35 +1,41 @@
 .headerContainer {
 height: 5rem;
-border-bottom:1px solid var(--grey-800)
+border-bottom:1px solid var(--gray-800)
     
 }
 
-.headerContent{
-max-width: 1120px;
-height:5rem;
-margin: 8 auto;
-padding: 0 2rem;
+ .headerContent{
+ max-width: 1120px;
+ height:5rem;
+ margin: 8 auto;
+ padding: 0 2rem;
 
 display: flex;
 align-items: center;
 
-nav{
+ nav{
     margin-left: 5rem;
     height:5rem;
 
-a{
-    display: inline-block;
-    position: relative;
-    padding: 0 0.5rem;
-    height:5rem;
-    line-height: 5rem;
-    color: var(--grey-300);
+ a {
+     display: inline-block;
+     position: relative;
+     padding: 0 0.5rem;
+     height:5rem;
+     line-height: 5rem;
+     color: var(--grey-300);
 
-&:hover {
+     transition: color 0.2s;
+
+ &:hover {
     color: var (--white);
     font-weight: bold;
+
+    &.active {
+        color:yellow;
+    }
     
-}
+ }
             &.active::after{
             content: '';
             height: 3px;
@@ -39,8 +45,11 @@ a{
             bottom:1px;
             left:0;
             background: var(--yellow-500);
-            }
+             }
         }
     }
      
-}
+    button {
+        margin-left: auto;
+    }
+ }
